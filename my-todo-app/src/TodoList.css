@@ -1,0 +1,189 @@
+/* TodoList.css */
+
+.todo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+}
+
+.dark-mode h1 {
+    color: #fff;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode input[type="text"] {
+    background-color: #555;
+    border: 2px solid #666;
+    color: #fff;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dark-mode .task-list li {
+    background-color: #444;
+    border-bottom: 1px solid #555;
+}
+
+.task-list li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+
+.dark-mode .task-list li:hover {
+    background-color: #555;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1.1em;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.dark-mode .task-text {
+    color: #fff;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.button-group {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.move-up-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.move-up-btn:hover {
+    background-color: #0b79d0;
+}
+
+.move-down-btn {
+    background-color: #FFC107;
+    color: black;
+}
+
+.move-down-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.dark-mode-toggle {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #666;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #444;
+}
+
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
